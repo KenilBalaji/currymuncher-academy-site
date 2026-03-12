@@ -1,0 +1,4438 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Curry Muncher Academy
+  </title>
+  <style>
+   h1 { font-size: 1.8em; font-family: Roboto, sans-serif; line-height: 1.167em}h1,h1 a,h1 a:visited { color: #f4f4f4;}h2 { color: #f4f4f4; line-height: 1em;}a#favorite { color: #ff1717;}.fav{ display:none; }p{ line-height: 1.8em;}.boxInner2, .boxInner3{ height: 208px; width: 180px; background: #2a2a2a; color: #fff;}.boxInner2 a, .boxInner3 a{ color: #626262}.boxInner, .boxInner2, .boxInner3 { margin: 4px 8px 12px; position: relative;}.boxInner3 img { border-radius: 5px;}.titleBox { bottom: 0; width: 170px; background-color: #3d3d3d; border-radius: 0 0 6px 6px; font: 15px 'Lucida Sans',sans-serif; padding: 5px; overflow: hidden; position: absolute; color: #eee;}a{ text-decoration: none; color: #ededed;}.morelinks a { font-weight: 600; font-size: 15px!important;}#items li,.navlink,.navlink a,ul.tabs li { display: inline-block}.searchbar{ display: inline-table; margin-top: -5px;}.logo { padding: 15px;}.logo a { font-size: 20px; color: #ffc600; font-weight: 700;}::placeholder { color: #cbcbcb;}#content { text-align: center; margin-left:180px; background:#000; }ol, ul { padding: 0;}.tag-carousel-title h1 a { color: #fff;}.fgh1 { float: left;}.tag-more { margin-top: 38px; margin-left: 10px; display: inline-block;}.tag-carousel { width: 90%; margin: auto auto; padding: 15px; position: relative;}.tag-carousel-title { clear: both; padding-left: 15px; float:left}.slider { flex-wrap: wrap; flex-direction: column; height: 460px}.slider,.slider2 { display: flex; width: 100%; overflow: hidden}.align-right { float: right;}body { color: #ededed; background-color: #000; border: none; margin: 0; font-family: Roboto, sans-serif;} #topnav { background: #000; z-index: 9999; height: 55px; top: 0; margin-left:180px; } #mySidebar { height: 100%; width: 180px; background:#000; position: fixed!important; overflow: hidden; z-index: 99995; }#mySidebar:hover { overflow: auto;}a.sidebar-bar-item { display: block; padding: 10px 5px 10px 20px; color: #ddd !important; text-decoration: none;}a.sidebar-bar-item:hover { background: #19273b; text-decoration: none;}#mySidebar::-webkit-scrollbar { width: 7px;} #mySidebar::-webkit-scrollbar-thumb { background: rgba(168, 168, 168, 0.8); }#searchform input[type="text"] { border-radius: 0px; width: 80%; font-size: 18px; height: 10px; color: #ededed; background-color: #000; border: 1px solid #4b4b4b; padding: 10px;}.navlink button { margin: 0 10px; color: #ededed; background-color: #575757; border: none; border-radius: 5px; padding: 5px; font-size: x-large; width: 55px; display:none}.navlink button:focus {outline:0;}.searchbar { display: inline-table; margin-top: -5px;}button.btn.btn-primary { border-radius: 0px; font-size: 16px; height: 33px; border: 1px solid #4b4b4b; background-color: #000; padding: 0 15px 0 15px; color: #fff;}.searchbar { padding: 15px 0 0 15%; width: 70%;} @media only screen and (max-width: 480px) { #back-to-top, .login{ display:none; } #how-to p, #description p{ max-width: 100%; } #searchform input[type="text"] { width: 155px; } .searchbar { width: 0%; padding:0px } #info-box .align-right { float:none; } #how-to, #description { max-width: 100%; } body{ overflow: hidden; } #extra-desc { padding: 15px !important; } #topnav{ height: 60px; padding: 10px; } #mySidebar{ overflow-y: auto; } .tagwrap{ padding:1px } .s2,.s,.as,.dda,.rr{ display:none; } }.rr{ margin: auto; float: right; padding: 10px;} @media (max-width:850px) and (min-width:481px) { #searchform input[type="text"] { width: 77%; } .searchbar { width: 70%; padding: 15px 0 0 7%; } #extra-desc { padding: 20px; } #mySidebar{ overflow-y: auto; } } @media screen and (max-width: 950px) { #mySidebar {display: none;} #topnav{margin-left:0} #content{margin-left:0} .navlink button { display:block; } } @media (max-width:1207px) and (min-width:951px) { .searchbar { padding: 15px 0 0 20%; width: 60%; } }
+  </style>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAMFBMVEU2Njb/xgCuih97ZSvZqg9LQzNcUDFsWy6JbyiWeSW5kxvEmxfjsQr2wAPPohPtuQYI+9kBAAAAVUlEQVR42mNgwA3SWQsgDBWem4JyjApODCqKzcILE4EMfTlmYUXGzYcYFEWYBUUCBYUYFBcaCzc2AkVUYjcLN04EKeaSFJQNBDLSWc2NTZkTyhiIAADOyRDIUV4GggAAAABJRU5ErkJggg==" rel="shortcut icon" type="image/png"/>
+  <script type="text/javascript">
+   if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/Android/i))) { location.replace("https://kbhgames.com/engine/html5");}
+  </script>
+  <link crossorigin="anonymous" href="https://img.kbhgames.com" rel="preconnect">
+   <link crossorigin="anonymous" href="https://tpc.googlesyndication.com" rel="preconnect"/>
+   <link crossorigin="anonymous" href="https://googleads.g.doubleclick.net" rel="preconnect"/>
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-2568701-2', 'auto'); ga('send', 'pageview');
+   </script>
+  </link>
+ </head>
+ <body>
+  <header>
+   <nav>
+    <div id="mySidebar">
+     <div class="logo">
+      <a href="https://kbhgames.com" target="_top">
+       KB Games
+      </a>
+     </div>
+     <a class="sidebar-bar-item fav" href="https://kbhgames.com/favorite">
+      ❤ Favorites
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/">
+      Home
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/new">
+      New Games
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/best-new-games">
+      Best Of New
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/friday-night-funkin">
+      Friday Night Funkin
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/action">
+      Action
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/2-player">
+      2 Player
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/puzzle">
+      Puzzle
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/shooting">
+      Shooting
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/sports">
+      Sports
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/arcade">
+      Arcade
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/fighting">
+      Fighting
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/racing">
+      Racing
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/rpg">
+      RPG
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/retro">
+      Retro
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/multiplayer">
+      Multiplayer
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/funny">
+      Funny
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/run">
+      Run
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/skill">
+      Skill
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/educational">
+      Educational
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/simulation">
+      Simulation
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/platform">
+      Platformer
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/strategy">
+      Strategy
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/casual">
+      Casual
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/word">
+      Word
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/card">
+      Card
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/board">
+      Board
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/car">
+      Car
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/bike">
+      Bike
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/soccer">
+      Soccer
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/animal">
+      Animal
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/cartoon">
+      Cartoon
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/sonic">
+      Sonic
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/mario">
+      Mario
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/minecraft">
+      Minecraft
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/star-wars">
+      Star Wars
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/lego">
+      Lego
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/disney">
+      Disney
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/super-hero">
+      Super Hero
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/mega-man">
+      Mega Man
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/anime">
+      Anime
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/pokemon">
+      Pokemon
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/dbz">
+      Dragon Ball Z
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/snes">
+      SNES
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/sega">
+      Sega
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/gba">
+      GBA
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/engine/webgl">
+      Unity
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/engine/html5">
+      Mobile
+     </a>
+     <a class="sidebar-bar-item" href="https://kbhgames.com/tag/download">
+      Download
+     </a>
+     <br/>
+     <br/>
+     <br/>
+    </div>
+    <div id="topnav">
+     <div class="navlink">
+      <button id="show-sidebar">
+       ☰
+      </button>
+     </div>
+     <div class="searchbar">
+      <form action="https://kbhgames.com/" class="form-search" id="searchform" method="get" role="search">
+       <input name="s" placeholder="Search for a Game" type="text"/>
+       <button class="btn btn-primary" type="submit">
+        🔎
+       </button>
+      </form>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <div id="content">
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/new">
+        New Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/new/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="new-games">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-isaac">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Isaac" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Isaac.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Isaac
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-fancy-pants-2">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Fancy Pants 2" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-Fancy-Pants-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Fancy Pants 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-minecraft-creeper-vs-steve">
+       <span class="new">
+       </span>
+       <img alt="FNF: Minecraft Creeper vs Steve" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-minecraft-creeper-vs-steve.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Minecraft Creeper vs Steve
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-parappa-prince-fleaswallow">
+       <span class="new">
+       </span>
+       <img alt="FNF vs PARAPPA (Prince Fleaswallow)" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-PARAPPA-Prince-Fleaswallow-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs PARAPPA (Prince Fleaswallow)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-cheese">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin' vs Cheese" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Cheese.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' vs Cheese
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-expurgation-retrospecters-remix">
+       <span class="new">
+       </span>
+       <img alt="FNF: Expurgation RetroSpecter's Remix" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-retrospecters-expurgation-remix.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Expurgation RetroSpecter's Remix
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fine-night-funkout-vs-clippy">
+       <span class="new">
+       </span>
+       <img alt="Fine Night Funkout VS Clippy" class="lazy" data-src="https://img.kbhgames.com/2021/06/Fine-Night-Funkout-VS-Clippy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Fine Night Funkout VS Clippy
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-the-changed-mod">
+       <span class="new">
+       </span>
+       <img alt="FNF Changed Mod" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Changed-Mod.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Changed Mod
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-shaggy-remastered">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Shaggy Remastered" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-Shaggy-Remastered.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Shaggy Remastered
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-weegeepie">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Weegeepie" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Weegeepie.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Weegeepie
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-avenue">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin' vs Avenue" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Avenue.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' vs Avenue
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-bloxxin-vs-roblox-noob">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Bloxxin' vs Roblox Noob" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Bloxxin-vs-Roblox-Noob.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Bloxxin' vs Roblox Noob
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-rosie">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin' vs Rosie" class="lazy" data-src="https://img.kbhgames.com/2021/06/friday-night-funkin-vs-rosie.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' vs Rosie
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/drunken-wrestle">
+       <span class="new">
+       </span>
+       <img alt="Drunken Wrestle" class="lazy" data-src="https://img.kbhgames.com/2021/06/Drunken-Wrestle.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Drunken Wrestle
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-mid-fight-masses-thicc-sarvente-reanimated-ruv">
+       <span class="new">
+       </span>
+       <img alt="FNF: Mid-Fight Masses Thicc Sarvente + Reanimated Ruv" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-mid-fight-masses-thicc-sarvente-reanimated-ruv.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Mid-Fight Masses Thicc Sarvente + Reanimated Ruv
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-taylor">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Taylor" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Taylor.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Taylor
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-satoru-gojo-jujutsu-kaisen">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Satoru Gojo (Jujutsu Kaisen)" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-Satoru-Gojo-Jujutsu-Kaisen.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Satoru Gojo (Jujutsu Kaisen)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-whitty-vs-pico-remix-demolition">
+       <span class="new">
+       </span>
+       <img alt="FNF: Whitty Vs. Pico Remix Demolition" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-whitty-vs-pico-remix-demolition.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Whitty Vs. Pico Remix Demolition
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-jeb">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Jeb" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Jeb.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Jeb
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-conner">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Conner" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Conner.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Conner
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pixel-samurai">
+       <span class="new">
+       </span>
+       <img alt="Pixel Samurai" class="lazy" data-src="https://img.kbhgames.com/2021/06/Pixel-Samurai.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pixel Samurai
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-ghosttwins">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin Vs. GhostTwins" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-Vs.-GhostTwins.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin Vs. GhostTwins
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-sandboxin">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Sandboxin'" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Sandboxin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Sandboxin'
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-omori">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs OMORI" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-OMORI-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs OMORI
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-nigh-funkin-vs-kou-kepler-observation-unit">
+       <span class="new">
+       </span>
+       <img alt="FNF vs KOU (Kepler Observation Unit)" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-KOU-Kepler-Observation-Unit.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs KOU (Kepler Observation Unit)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-high-effort-test">
+       <span class="new">
+       </span>
+       <img alt="FNF: High Effort Test" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-high-effort-test.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: High Effort Test
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/exit84">
+       <span class="new">
+       </span>
+       <img alt="Exit84" class="lazy" data-src="https://img.kbhgames.com/2021/06/Exit84.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Exit84
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-tomato-dude">
+       <span class="new">
+       </span>
+       <img alt="FNF Vs. Tomato Dude" class="lazy" data-src="https://img.kbhgames.com/2021/06/friday-night-funkin-vs-tomato-dude.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs. Tomato Dude
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-galaxy-mod">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin Galaxy Mod" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-Galaxy-Mod.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin Galaxy Mod
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-brawlstars-mod">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin with Brawl Stars" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-Brawl-Stars.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin with Brawl Stars
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-nigh-funkin-vs-sketchy-remastered">
+       <span class="new">
+       </span>
+       <img alt="FNF Vs. Sketchy Remastered" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Vs.-Sketchy-Remastered-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs. Sketchy Remastered
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-tricky-phrase-0">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Tricky Phrase 0" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-Tricky-Phrase-0.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Tricky Phrase 0
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-fueg0">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin VS Fueg0" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-VS-Fueg0.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin VS Fueg0
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-character-test-playground-2">
+       <span class="new">
+       </span>
+       <img alt="FNF Character Test Playground 2" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Character-Test-Playground2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Character Test Playground 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-character-test-playground">
+       <span class="new">
+       </span>
+       <img alt="FNF Character Test Playground" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Character-Test-Playground.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Character Test Playground
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-mom-vs-dad-divorcin-court">
+       <span class="new">
+       </span>
+       <img alt="FNF: Mom vs Dad Divorcin Court" class="lazy" data-src="https://img.kbhgames.com/2021/06/friday-night-funkin-mom-vs-dad-divorcin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Mom vs Dad Divorcin Court
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-amogus-among-us-drip">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Amogus: Among Us Drip" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-vs-amogus-among-us-drip.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Amogus: Among Us Drip
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/flip-n-fall">
+       <span class="new">
+       </span>
+       <img alt="Flip 'n Fall" class="lazy" data-src="https://img.kbhgames.com/2021/06/flip-n-fall.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Flip 'n Fall
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-codist">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Codist" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Codist.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Codist
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-mission-8">
+       <span class="new">
+       </span>
+       <img alt="Zombie Mission 8" class="lazy" data-src="https://img.kbhgames.com/2021/06/Zombie-Mission-8-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Mission 8
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-coralie-peculiar-colours">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Coralie: Peculiar Colours" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-Peculiar-Colours.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Coralie: Peculiar Colours
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-faraday">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin' vs Faraday" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Faraday.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' vs Faraday
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-zardy-foolhardy-mod-pack">
+       <span class="new">
+       </span>
+       <img alt="FNF: Zardy Foolhardy Mod Pack" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-zardy-foolhardy-mod-pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Zardy Foolhardy Mod Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-knight">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Knight" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Knight.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Knight
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-plate">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Plate" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-Plate.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Plate
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-b-sides-duo-pack">
+       <span class="new">
+       </span>
+       <img alt="FNF: B-Sides Duo Pack" class="lazy" data-src="https://img.kbhgames.com/2021/06/friday-night-funkin-b-sides-duo-pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: B-Sides Duo Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-pico-x-boyfriend">
+       <span class="new">
+       </span>
+       <img alt="FNF: Pico X Boyfriend" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-pico-x-boyfriend.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Pico X Boyfriend
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-x-ray">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin X-RAY" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-X-RAY.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin X-RAY
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/boxbob">
+       <span class="new">
+       </span>
+       <img alt="BoxBob" class="lazy" data-src="https://img.kbhgames.com/2021/06/BoxBob.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        BoxBob
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-piconjo">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Piconjo" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-Piconjo.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Piconjo
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pokemon-radical-red-version">
+       <span class="new">
+       </span>
+       <img alt="Radical Red Version" class="lazy" data-src="https://img.kbhgames.com/2021/06/Radical-Red-Version.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Radical Red Version
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-monika-ddlc">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Monika (DDLC) Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Monika-DDLC.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Monika (DDLC) Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sonic-the-hedgehog-1995">
+       <span class="new">
+       </span>
+       <img alt="Sonic 1995" class="lazy" data-src="https://img.kbhgames.com/2021/05/Sonic-The-Hedgehog-1995.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sonic 1995
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/game-cafe-escape">
+       <span class="new">
+       </span>
+       <img alt="Game Cafe Escape" class="lazy" data-src="https://img.kbhgames.com/2021/06/Game-Cafe-Escape.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Game Cafe Escape
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/new/page/2">
+       <img alt="More New Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+   </script>
+   <ins class="adsbygoogle" data-ad-client="ca-pub-6866920588347480" data-ad-slot="9862867454" data-restrict-data-processing="1" style="display:inline-block;min-width:380px;max-width:970px;width:100%;height:90px">
+   </ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <h1>
+      Featured Games
+     </h1>
+    </div>
+    <div class="slider" id="featured">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin">
+       <img alt="Friday Night Funkin'" class="lazy loaded" data-ll-status="loaded" data-src="https://img.kbhgames.com/2020/11/Friday-Night-Funkin.jpg" height="180" src="https://img.kbhgames.com/2020/11/Friday-Night-Funkin.jpg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin'
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/elastic-man">
+       <span class="feat">
+       </span>
+       <img alt="Morty Elastic Man" class="lazy" data-src="https://img.kbhgames.com/2020/06/Elastic-Man.jpg" height="180" src="/m.svg" width="180">
+        <div class="titleBox">
+         Morty Elastic Man
+        </div>
+       </img>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sonic-1-exe">
+       <span class="feat">
+       </span>
+       <img alt="Sonic 1 EXE" class="lazy" data-src="https://img.kbhgames.com/2018/05/Sonic-1-EXE.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sonic 1 EXE
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/puppet-killer">
+       <span class="feat">
+       </span>
+       <img alt="Puppet Killer" class="lazy" data-src="https://img.kbhgames.com/2018/11/Puppet-Killer.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Puppet Killer
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/back-street-soccer">
+       <span class="feat">
+       </span>
+       <img alt="Back Street Soccer" class="lazy" data-src="https://img.kbhgames.com/2018/06/Back-Street-Soccer.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Back Street Soccer
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-the-x-event">
+       <span class="feat">
+       </span>
+       <img alt="Friday Night Funkin: The X Event Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/04/fnf-x-mod.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin: The X Event Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/minecraft-classic">
+       <span class="feat">
+       </span>
+       <img alt="Minecraft Classic" class="lazy" data-src="https://img.kbhgames.com/2019/05/Minecraft-Classic.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Minecraft Classic
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/wild-race">
+       <span class="feat">
+       </span>
+       <img alt="Wild Race" class="lazy" data-src="https://img.kbhgames.com/2019/06/Wild-Race.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Wild Race
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/street-fighter-alpha-3">
+       <span class="feat">
+       </span>
+       <img alt="Street Fighter Alpha 3" class="lazy" data-src="https://img.kbhgames.com/2017/10/street-fighter-alpha-3.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Street Fighter Alpha 3
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/duck-life-battle">
+       <span class="feat">
+       </span>
+       <img alt="Duck Life: Battle" class="lazy" data-src="https://img.kbhgames.com/2018/09/duck-life-battle.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Duck Life: Battle
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/toon-cup-2019">
+       <span class="feat">
+       </span>
+       <img alt="Toon Cup 2019" class="lazy" data-src="https://img.kbhgames.com/2019/06/Toon-Cup-2019-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Toon Cup 2019
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/wolf-simulator">
+       <span class="feat">
+       </span>
+       <img alt="Wolf Simulator 3D" class="lazy" data-src="https://img.kbhgames.com/2018/02/wolf-simulator.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Wolf Simulator 3D
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/crazy-stunt-cars-multiplayer">
+       <span class="feat">
+       </span>
+       <img alt="Crazy Stunt Cars Multiplayer" class="lazy" data-src="https://img.kbhgames.com/2018/09/Crazy-Stunt-Cars-Multiplayer.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Crazy Stunt Cars Multiplayer
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/basketbros">
+       <span class="feat">
+       </span>
+       <img alt="BasketBros" class="lazy" data-src="https://img.kbhgames.com/2020/01/BasketBros.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        BasketBros
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/cars-3-demolition-derby">
+       <span class="feat">
+       </span>
+       <img alt="Cars 3 Demolition Derby" class="lazy" data-src="https://img.kbhgames.com/2018/01/Cars-3-Demolition-Derby.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Cars 3 Demolition Derby
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/little-big-snake-io">
+       <span class="feat">
+       </span>
+       <img alt="Little Big Snake (.IO)" class="lazy" data-src="https://img.kbhgames.com/2018/01/Little-Big-Snake-.IO_.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Little Big Snake (.IO)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/bumper-bros-tmnt">
+       <span class="feat">
+       </span>
+       <img alt="Bumper Bros: TMNT" class="lazy" data-src="https://img.kbhgames.com/2019/07/Bumper-Bros-TMNT.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Bumper Bros: TMNT
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/teen-sonic-in-sonic-1">
+       <span class="feat">
+       </span>
+       <img alt="Teen Sonic in Sonic 1" class="lazy" data-src="https://img.kbhgames.com/2020/03/Teen-Sonic-in-Sonic-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Teen Sonic in Sonic 1
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/monster-girl-maker">
+       <span class="feat">
+       </span>
+       <img alt="Monster Girl Maker" class="lazy" data-src="https://img.kbhgames.com/2020/03/Monster-Girl-Maker.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Monster Girl Maker
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/connect-four">
+       <span class="feat">
+       </span>
+       <img alt="Connect Four" class="lazy" data-src="https://img.kbhgames.com/2017/07/Connect-4.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Connect Four
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/combat-reloaded">
+       <span class="feat">
+       </span>
+       <img alt="Combat Reloaded" class="lazy" data-src="https://img.kbhgames.com/2016/10/Combat-Reloaded-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Combat Reloaded
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/oregon-trail-deluxe">
+       <span class="feat">
+       </span>
+       <img alt="Oregon Trail Deluxe Online" class="lazy" data-src="https://img.kbhgames.com/2017/01/Oregon-Trail-Deluxe.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Oregon Trail Deluxe Online
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sonic-2-anniversary-edition">
+       <span class="feat">
+       </span>
+       <img alt="Sonic 2 Anniversary Edition" class="lazy" data-src="https://img.kbhgames.com/2020/12/sonic-2-anniversary-edition.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sonic 2 Anniversary Edition
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/merc-zone">
+       <span class="feat">
+       </span>
+       <img alt="Merc Zone" class="lazy" data-src="https://img.kbhgames.com/2020/06/Merc-Zone.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Merc Zone
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sonic-powered">
+       <span class="feat">
+       </span>
+       <img alt="Sonic Powered" class="lazy" data-src="https://img.kbhgames.com/2019/12/SONIC-POWERED.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sonic Powered
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/touge-drift-and-racing">
+       <span class="feat">
+       </span>
+       <img alt="Touge Drift and Racing" class="lazy" data-src="https://img.kbhgames.com/2020/02/Touge-Drift-and-Racing.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Touge Drift and Racing
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/mine-blocks-2">
+       <span class="feat">
+       </span>
+       <img alt="Mine Blocks 2" class="lazy" data-src="https://img.kbhgames.com/2015/04/Mine-Blocks-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Mine Blocks 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/super-disc-dual-2">
+       <span class="feat">
+       </span>
+       <img alt="Super Disc Dual 2" class="lazy" data-src="https://img.kbhgames.com/2019/03/Super-Disc-Dual-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Super Disc Dual 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/rescue-of-titans">
+       <span class="feat">
+       </span>
+       <img alt="Teen Titans Go: Rescue of Titans" class="lazy" data-src="https://img.kbhgames.com/2018/11/Rescue-of-Titans.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Teen Titans Go: Rescue of Titans
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/picohot-superhot">
+       <span class="feat">
+       </span>
+       <img alt="PicoHot: SuperHot" class="lazy" data-src="https://img.kbhgames.com/2020/04/picohot-superhot.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        PicoHot: SuperHot
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/extreme-car-stunts-3d">
+       <span class="feat">
+       </span>
+       <img alt="Extreme Car Stunts 3D" class="lazy" data-src="https://img.kbhgames.com/2018/09/Extreme-Car-Stunts-3D.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Extreme Car Stunts 3D
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/tiger-simulator">
+       <span class="feat">
+       </span>
+       <img alt="Tiger Simulator 3D" class="lazy" data-src="https://img.kbhgames.com/2018/04/Tiger-Simulator-3D.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Tiger Simulator 3D
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/the-floor-is-lava-apple-onion">
+       <span class="feat">
+       </span>
+       <img alt="The Floor is Lava: Apple &amp; Onion" class="lazy" data-src="https://img.kbhgames.com/2019/10/The-Floor-is-Lava-Apple-Onion.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        The Floor is Lava: Apple &amp; Onion
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/super-scratch-bros">
+       <span class="feat">
+       </span>
+       <img alt="Super Scratch Bros" class="lazy" data-src="https://img.kbhgames.com/2020/05/Super-Scratch-Bros.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Super Scratch Bros
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/surviv-io">
+       <span class="feat">
+       </span>
+       <img alt="Survivio" class="lazy" data-src="https://img.kbhgames.com/2018/01/Surviv-IO.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Survivio
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/vex-4">
+       <span class="feat">
+       </span>
+       <img alt="Vex 4" class="lazy" data-src="https://img.kbhgames.com/2018/10/Vex-4.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Vex 4
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/happy-room">
+       <span class="feat">
+       </span>
+       <img alt="Happy Room" class="lazy" data-src="https://img.kbhgames.com/2017/02/Happy-Room.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Happy Room
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/bike-blast">
+       <span class="feat">
+       </span>
+       <img alt="Bike Blast" class="lazy" data-src="https://img.kbhgames.com/2017/04/Bike-Blast-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Bike Blast
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sonic-cd">
+       <span class="feat">
+       </span>
+       <img alt="Sonic CD" class="lazy" data-src="https://img.kbhgames.com/2019/11/Sonic-CD.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sonic CD
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/wholesome-cats">
+       <span class="feat">
+       </span>
+       <img alt="Wholesome Cats" class="lazy" data-src="https://img.kbhgames.com/2018/10/Wholesome-Cats.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Wholesome Cats
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/troll-face-quest-video-games-2">
+       <span class="feat">
+       </span>
+       <img alt="Troll Face Quest Video Games 2" class="lazy" data-src="https://img.kbhgames.com/2018/02/Troll-Face-Quest-Video-Games-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Troll Face Quest Video Games 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/big-shot-boxing">
+       <span class="feat">
+       </span>
+       <img alt="Big Shot Boxing" class="lazy" data-src="https://img.kbhgames.com/2018/03/Big-Shot-Boxing.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Big Shot Boxing
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pass-me">
+       <span class="feat">
+       </span>
+       <img alt="Pass Me" class="lazy" data-src="https://img.kbhgames.com/2018/12/Pass-Me.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pass Me
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/surfs-up">
+       <span class="feat">
+       </span>
+       <img alt="Surf's Up Cartoon" class="lazy" data-src="https://img.kbhgames.com/2018/06/Surfs-Up.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Surf's Up Cartoon
+       </div>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/best-new-games">
+        Best of New Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/best-new-games/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="best-of-new-games">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-tricky-version-2-0">
+       <span class="new">
+       </span>
+       <img alt="FNF Vs. Tricky Version 2.0 (Phase 3)" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-vs-tricky-version-2-0.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs. Tricky Version 2.0 (Phase 3)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-impostor-among-us">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Impostor Among Us v2" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-vs-impostor-full-week.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Impostor Among Us v2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-shaggy">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Shaggy v2" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-vs-shaggy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Shaggy v2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-tabi-ex-boyfriend">
+       <span class="new">
+       </span>
+       <img alt="FNF vs TABI Ex Boyfriend" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-vs-TABI-Ex-Boyfriend.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs TABI Ex Boyfriend
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-agoti">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs AGOTI" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-AGOTI.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs AGOTI
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-bob">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Bob" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Bob.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Bob
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-pico-school">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin: Pico School" class="lazy" data-src="https://img.kbhgames.com/2021/05/picoschool.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin: Pico School
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-sans">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin Vs. Sans" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-Vs.-Sans-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin Vs. Sans
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-character-test-playground">
+       <span class="new">
+       </span>
+       <img alt="FNF Character Test Playground" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Character-Test-Playground.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Character Test Playground
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-character-test-playground-2">
+       <span class="new">
+       </span>
+       <img alt="FNF Character Test Playground 2" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Character-Test-Playground2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Character Test Playground 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-starlight-mayhem">
+       <span class="new">
+       </span>
+       <img alt="FNF: Starlight Mayhem" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-starlight-mayhem.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Starlight Mayhem
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-monika-ddlc">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Monika (DDLC) Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Monika-DDLC.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Monika (DDLC) Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-smg4-if-mario-was-in-fnf-mod-pack">
+       <span class="new">
+       </span>
+       <img alt="FNF SMG4 – If Mario Was In FNF Mod Pack" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-smg4-if-mario-was-in-fnf-mod-pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF SMG4 – If Mario Was In FNF Mod Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-funkin-nights-at-freddys">
+       <span class="new">
+       </span>
+       <img alt="FNF: Funkin' Nights at Freddy's" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-funkin-nights-at-freddys.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Funkin' Nights at Freddy's
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-fanmade-vs-tricky-phase-3">
+       <span class="new">
+       </span>
+       <img alt="FNF: Fanmade Vs. Tricky Phase 3" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-fanmade-vs-tricky-phase-3.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Fanmade Vs. Tricky Phase 3
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-starving-artist">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Starving Artist" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Starving-Artist.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Starving Artist
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-vs-trollface-trollge">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Trollface/Trollge" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-vs-vs-trollface-trollge.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Trollface/Trollge
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-gender-swap-mod-pack">
+       <span class="new">
+       </span>
+       <img alt="FNF Gender Swap Mod Pack" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-Gender-Swap-Mod-Pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Gender Swap Mod Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-summer-vacation">
+       <span class="new">
+       </span>
+       <img alt="FNF: Summer Vacation" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-Summer-Vacations.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Summer Vacation
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-v-s-pompom">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Pompom and Mackie" class="lazy" data-src="https://img.kbhgames.com/2021/04/FNF-vs-Pompom-and-Mackie.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Pompom and Mackie
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-pico-x-boyfriend">
+       <span class="new">
+       </span>
+       <img alt="FNF: Pico X Boyfriend" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-pico-x-boyfriend.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Pico X Boyfriend
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-playable-mom-vocals-for-all-songs">
+       <span class="new">
+       </span>
+       <img alt="FNF: Playable Mom with Vocals" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-playable-mom-vocals-for-all-songs.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Playable Mom with Vocals
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-nekofreak">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs NekoFreak" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-NekoFreak.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs NekoFreak
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/five-night-funkin-vs-bad-piggies-from-angry-birds">
+       <span class="new">
+       </span>
+       <img alt="FNF Vs. Bad Piggies" class="lazy" data-src="https://img.kbhgames.com/2021/05/five-night-funkin-vs-bad-piggies-from-angry-birds.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs. Bad Piggies
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-chara-monster-boy">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Chara the Monster boy" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-vs-Chara-Monster-boy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Chara the Monster boy
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-garcello-but-bad">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Garcello, but Bad" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-vs-garcello-but-bad.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Garcello, but Bad
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-the-blueballs-incident-trollge">
+       <span class="new">
+       </span>
+       <img alt="FNF: The Blueballs Incident (Trollge)" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-the-blueballs-incident-trollge.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: The Blueballs Incident (Trollge)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-friday-night-gaming-vs-loki">
+       <span class="new">
+       </span>
+       <img alt="FNF: Friday Night Gaming vs Loki" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-friday-night-gaming-vs-loki.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Friday Night Gaming vs Loki
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-garcello-retrospecter-release-remix">
+       <span class="new">
+       </span>
+       <img alt="FNF Vs Garcello Retrospecter Release" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Vs-Garcello-Retrospecter-Release-remix.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs Garcello Retrospecter Release
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-x-ray">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin X-RAY" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-X-RAY.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin X-RAY
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-viernes-night-funkin">
+       <span class="new">
+       </span>
+       <img alt="FNF: Viernes Night Funkin'" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-viernes-night-funkin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Viernes Night Funkin'
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-pico-night-funkin">
+       <span class="new">
+       </span>
+       <img alt="FNF: Pico Night Funkin" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-pico-night-funkin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Pico Night Funkin
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-internets-down">
+       <span class="new">
+       </span>
+       <img alt="FNF Internet's Down" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-internets-down.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Internet's Down
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-dusttale-sans">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Dusttale Sans" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Dusttale-Sans.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Dusttale Sans
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-crazy-girlfriend">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Crazy Girlfriend" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-vs-crazy-girlfriend.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Crazy Girlfriend
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-eddsworlds-funky-beats">
+       <span class="new">
+       </span>
+       <img alt="FNF: Eddsworlds Funky Beats" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-eddsworlds-funky-beats.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Eddsworlds Funky Beats
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-beep-power">
+       <span class="new">
+       </span>
+       <img alt="FNF: Beep Power" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-beep-power.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Beep Power
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-whitty-ballistic-retro-specter-remix">
+       <span class="new">
+       </span>
+       <img alt="FNF Whitty Ballistic Retro Specter Remix" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-vs-Whitty-Ballistic-Retro-Specter-Remix.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Whitty Ballistic Retro Specter Remix
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-outrun-cartoon-cat">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Outrun Cartoon Cat" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Outrun-Cartoon-Cat.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Outrun Cartoon Cat
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-zardy-foolhardy-mod-pack">
+       <span class="new">
+       </span>
+       <img alt="FNF: Zardy Foolhardy Mod Pack" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-zardy-foolhardy-mod-pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Zardy Foolhardy Mod Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-cuphead-a-noisy-adventure">
+       <span class="new">
+       </span>
+       <img alt="FNF: Cuphead a Noisy Adventure!" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-cuphead-a-noisy-adventure.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Cuphead a Noisy Adventure!
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-mom-vs-dad-divorcin-court">
+       <span class="new">
+       </span>
+       <img alt="FNF: Mom vs Dad Divorcin Court" class="lazy" data-src="https://img.kbhgames.com/2021/06/friday-night-funkin-mom-vs-dad-divorcin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Mom vs Dad Divorcin Court
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-matt-wiik-3-fanmade">
+       <span class="new">
+       </span>
+       <img alt="FNF vs Matt WIIK 3 (Fanmade)" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-Matt-WIIK-3-Fanmade.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Matt WIIK 3 (Fanmade)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-upside">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin UpSide" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-UpSide.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin UpSide
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-brawlstars-mod">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin with Brawl Stars" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-Brawl-Stars.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin with Brawl Stars
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-cyrix">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin' VS Cyrix" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-vs-cyrix.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' VS Cyrix
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-mcyt-modpack">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin: MCYT ModPack" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-mcyt-modpack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin: MCYT ModPack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-tabi-genocide-retrospecter-remix">
+       <span class="new">
+       </span>
+       <img alt="FNF: Tabi Genocide Retrospecter Remix" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-tabi-genocide-retrospecter-remix.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Tabi Genocide Retrospecter Remix
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-mid-fight-masses-thicc-sarvente-reanimated-ruv">
+       <span class="new">
+       </span>
+       <img alt="FNF: Mid-Fight Masses Thicc Sarvente + Reanimated Ruv" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-mid-fight-masses-thicc-sarvente-reanimated-ruv.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Mid-Fight Masses Thicc Sarvente + Reanimated Ruv
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-high-effort-test">
+       <span class="new">
+       </span>
+       <img alt="FNF: High Effort Test" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-high-effort-test.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: High Effort Test
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-bloxxin-vs-roblox-noob">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Bloxxin' vs Roblox Noob" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Bloxxin-vs-Roblox-Noob.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Bloxxin' vs Roblox Noob
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-clay-mod">
+       <span class="new">
+       </span>
+       <img alt="FNF Clay Mod" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-Clay-Mod.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Clay Mod
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-v-s-sanford">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin V.S. Sanford" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-v-s-sanford.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin V.S. Sanford
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-weegeepie">
+       <span class="new">
+       </span>
+       <img alt="Friday Night Funkin vs Weegeepie" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Weegeepie.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Weegeepie
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/best-new-games/page/2">
+       <img alt="More Best of New Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <ins class="adsbygoogle" data-ad-client="ca-pub-6866920588347480" data-ad-slot="9862867454" data-restrict-data-processing="1" style="display:inline-block;min-width:380px;max-width:970px;width:100%;height:90px">
+   </ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/best-games">
+        Most Liked Games of All Time
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/best-games/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="most-liked">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin">
+       <img alt="Friday Night Funkin'" class="lazy" data-src="https://img.kbhgames.com/2020/11/Friday-Night-Funkin.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin'
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-sarventes-mid-fight-masses">
+       <img alt="Friday Night Funkin' Sarvente's Mid-Fight Masses" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-sarventes-mid-fight-masses-1.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' Sarvente's Mid-Fight Masses
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-v-s-whitty-full-week">
+       <img alt="Friday Night Funkin' V.S. Whitty Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/03/friday-night-funkin-v-s-whitty-full-week.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' V.S. Whitty Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-sky-full-week">
+       <img alt="Friday Night Funkin VS Sky Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-VS-Sky-Full-Week.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin VS Sky Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-garcello">
+       <img alt="Friday Night Funkin VS Garcello" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-VS-Garcello.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin VS Garcello
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-the-tricky-mod">
+       <img alt="Friday Night Funkin' Vs Tricky the Clown Mod" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-the-tricky-mod.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' Vs Tricky the Clown Mod
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-hex-mod-full-week">
+       <img alt="Friday Night Funkin Vs. Hex Mod Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-Vs.-Hex-Mod-Full-Week.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin Vs. Hex Mod Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-hatsune-miku">
+       <img alt="Friday Night Funkin' + Hatsune Miku" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-hatsune-miku.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' + Hatsune Miku
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/bleach-vs-naruto-3">
+       <img alt="Bleach Vs Naruto 3.3" class="lazy" data-src="https://img.kbhgames.com/2017/07/Bleach-Vs-Naruto-3.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Bleach Vs Naruto 3.3
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-but-bad">
+       <img alt="Friday Night Funkin, but Bad" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-but-bad.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin, but Bad
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/temple-run-2-online">
+       <img alt="Temple Run 2 Online" class="lazy" data-src="https://img.kbhgames.com/2016/02/template-run-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Temple Run 2 Online
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-tord">
+       <img alt="FNF vs Tord/Tom/Edd" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnftordremastered.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Tord/Tom/Edd
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-hd">
+       <img alt="Friday Night Funkin HD" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-HD.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin HD
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-neo">
+       <img alt="Friday Night Funkin' Neo" class="lazy" data-src="https://img.kbhgames.com/2021/03/friday-night-funkin-neo.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' Neo
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-tricky-version-2-0">
+       <img alt="FNF Vs. Tricky Version 2.0 (Phase 3)" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-vs-tricky-version-2-0.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs. Tricky Version 2.0 (Phase 3)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-the-x-event">
+       <img alt="Friday Night Funkin: The X Event Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/04/fnf-x-mod.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin: The X Event Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/five-nights-freddys-2">
+       <img alt="Five Nights at Freddy's 2" class="lazy" data-src="https://img.kbhgames.com/2015/09/Five-nights-at-Freddys-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Five Nights at Freddy's 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-b-side-remixes">
+       <img alt="Friday Night Funkin' B-Side Remixes" class="lazy" data-src="https://img.kbhgames.com/2021/03/friday-night-funkin-b-side-remixes.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' B-Side Remixes
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-impostor-among-us">
+       <img alt="FNF vs Impostor Among Us v2" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-vs-impostor-full-week.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Impostor Among Us v2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-matt-from-wii-sports">
+       <img alt="Friday Night Funkin Vs Matt 2.0" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-VS-Matt-from-Wii.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin Vs Matt 2.0
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-shaggy">
+       <img alt="Friday Night Funkin vs Shaggy v2" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-vs-shaggy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Shaggy v2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-tabi-ex-boyfriend">
+       <img alt="FNF vs TABI Ex Boyfriend" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-vs-TABI-Ex-Boyfriend.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs TABI Ex Boyfriend
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-v-s-tankman-high-effort-ugh-2-0">
+       <img alt="FNF: V.S. Tankman High Effort Ugh 2.0" class="lazy" data-src="https://img.kbhgames.com/2021/04/tankmanfnf.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: V.S. Tankman High Effort Ugh 2.0
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/gacha-life">
+       <img alt="Gacha Life" class="lazy" data-src="https://img.kbhgames.com/2019/09/Gacha-Life.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Gacha Life
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/bullet-force">
+       <img alt="Bullet Force" class="lazy" data-src="https://img.kbhgames.com/2018/04/Bullet-Force-Multiplayer.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Bullet Force
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-kapi">
+       <img alt="Friday Night Funkin VS. KAPI" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-VS.-KAPI.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin VS. KAPI
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-sonic-skin-mod">
+       <img alt="Friday Night Funkin: Sonic Skin Mod" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-sonic-skin-mod.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin: Sonic Skin Mod
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-agoti">
+       <img alt="Friday Night Funkin vs AGOTI" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-AGOTI.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs AGOTI
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-carol-v2">
+       <img alt="Friday Night Funkin VS Carol v2" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-VS-Carol-v2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin VS Carol v2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-bob">
+       <img alt="Friday Night Funkin vs Bob" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Bob.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Bob
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-pico-school">
+       <img alt="Friday Night Funkin: Pico School" class="lazy" data-src="https://img.kbhgames.com/2021/05/picoschool.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin: Pico School
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-foned-in-fnf-mobile">
+       <img alt="Friday Night Funkin': Foned In (FNF Mobile)" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-foned-in-fnf-mobile.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin': Foned In (FNF Mobile)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-sans">
+       <img alt="Friday Night Funkin Vs. Sans" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-Vs.-Sans-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin Vs. Sans
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/your-turn-to-die">
+       <img alt="Your Turn To Die" class="lazy" data-src="https://img.kbhgames.com/2019/11/Your-Turn-To-Die.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Your Turn To Die
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-character-test-playground">
+       <img alt="FNF Character Test Playground" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Character-Test-Playground.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Character Test Playground
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-everywhere-at-the-end-of-funk">
+       <img alt="FNF: Everywhere At The End Of Funk" class="lazy" data-src="https://img.kbhgames.com/2021/04/fnf-everywhere-at-the-end-of-funk.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Everywhere At The End Of Funk
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-character-test-playground-2">
+       <img alt="FNF Character Test Playground 2" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Character-Test-Playground2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Character Test Playground 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-friday-night-vibin-utau-cover">
+       <img alt="FNF: Friday Night Vibin' UTAU Cover" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-friday-night-vibin-utau-cover.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Friday Night Vibin' UTAU Cover
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pokemon-light-platinum">
+       <img alt="Light Platinum" class="lazy" data-src="https://img.kbhgames.com/2014/12/Light-Platinum.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Light Platinum
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-starlight-mayhem">
+       <img alt="FNF: Starlight Mayhem" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-starlight-mayhem.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Starlight Mayhem
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-duo-pack">
+       <img alt="Friday Night Funkin' Duo Pack" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-Duo-Pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' Duo Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-cg5-edition-full-week">
+       <img alt="Friday Night Funkin' CG5 Edition Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/04/cg5.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' CG5 Edition Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sonic-classic-heroes">
+       <img alt="Sonic Classic Heroes" class="lazy" data-src="https://img.kbhgames.com/2015/08/Sonic-Classic-Heroes.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sonic Classic Heroes
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-b3-remixed">
+       <img alt="Friday Night Funkin' B3 REMIXED" class="lazy" data-src="https://img.kbhgames.com/2021/03/Friday-Night-Funkin-B3-REMIXED.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' B3 REMIXED
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/vs-zardy-ronald-mcdonald">
+       <img alt="FNF Vs Zardy &amp; Ronald Mcdonald" class="lazy" data-src="https://img.kbhgames.com/2021/04/Vs-Zardy-Ronald-Mcdonald.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs Zardy &amp; Ronald Mcdonald
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-with-shyrell-mod">
+       <img alt="Friday Night Funkin' With Shyrell MOD" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-With-Shyrell-MOD.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' With Shyrell MOD
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/floating-sandbox">
+       <img alt="Floating Sandbox" class="lazy" data-src="https://img.kbhgames.com/2019/04/Floating-Sandbox-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Floating Sandbox
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/five-nights-freddys-online">
+       <img alt="Five Nights at Freddy's" class="lazy" data-src="https://img.kbhgames.com/2015/08/Five-Nights-at-Freddy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Five Nights at Freddy's
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pokemon-ash-gray">
+       <img alt="Ash Gray" class="lazy" data-src="https://img.kbhgames.com/2014/12/Fakemon-Ash-Gray.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Ash Gray
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/the-world-easyest-game">
+       <img alt="The World's Easyest Game" class="lazy" data-src="https://img.kbhgames.com/2012/01/The-world-easyest-game.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        The World's Easyest Game
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/dragon-ball-z-supersonic-warriors">
+       <img alt="Dragon Ball Z: Supersonic Warriors" class="lazy" data-src="https://img.kbhgames.com/2014/10/dragon-ball-z-supersonic-warriors.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Dragon Ball Z: Supersonic Warriors
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-annie">
+       <img alt="Friday Night Funkin' vs Annie" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-VS-Annie.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' vs Annie
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/dragon-ball-z-buus-fury">
+       <img alt="Dragon Ball Z: Buu's Fury" class="lazy" data-src="https://img.kbhgames.com/2014/10/dragon-ball-z-buus-fury-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Dragon Ball Z: Buu's Fury
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/tank-trouble-4">
+       <img alt="Tank Trouble 4" class="lazy" data-src="https://img.kbhgames.com/2014/12/AZ-Tank-Trouble-4.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Tank Trouble 4
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/best-games/page/2">
+       <img alt="More Best Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/action">
+        Action Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/action/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="action">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/madness-off-color">
+       <img alt="MADNESS: Off-Color" class="lazy" data-src="https://img.kbhgames.com/2021/05/madness-off-color.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        MADNESS: Off-Color
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/stick-it-to-the-stickman">
+       <img alt="Stick it to the Stickman" class="lazy" data-src="https://img.kbhgames.com/2021/05/Stick-it-to-the-Stickman.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Stick it to the Stickman
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/drunken-table-wars">
+       <img alt="Drunken Table Wars" class="lazy" data-src="https://img.kbhgames.com/2021/04/Drunken-Table-Wars.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Drunken Table Wars
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/castle-crashing-the-beard-hd">
+       <img alt="Castle Crashing the Beard HD" class="lazy" data-src="https://img.kbhgames.com/2021/04/Castle-Crashing-the-Beard-HD.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Castle Crashing the Beard HD
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/adventure-time-break-the-worm">
+       <img alt="Adventure Time Break The Worm" class="lazy" data-src="https://img.kbhgames.com/2013/06/Adventure-Time-Break-The-Worm.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Adventure Time Break The Worm
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sonic-the-hedgehog-1995">
+       <img alt="Sonic 1995" class="lazy" data-src="https://img.kbhgames.com/2021/05/Sonic-The-Hedgehog-1995.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sonic 1995
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/football-legends-2021">
+       <img alt="Football Legends 2021" class="lazy" data-src="https://img.kbhgames.com/2021/05/Football-Legends-2021.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Football Legends 2021
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/jungle-hero-2">
+       <img alt="Jungle Hero 2" class="lazy" data-src="https://img.kbhgames.com/2021/02/Jungle-Hero-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Jungle Hero 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-parade-defense-3">
+       <img alt="Zombie Parade Defense 3" class="lazy" data-src="https://img.kbhgames.com/2021/04/Zombie-Parade-Defense-3-1.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Parade Defense 3
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/castle-wars-middle-ages">
+       <img alt="Castle Wars: Middle Ages" class="lazy" data-src="https://img.kbhgames.com/2021/04/castle-wars-middle-ages.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Castle Wars: Middle Ages
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/cartoon-network-skate-rush">
+       <img alt="Cartoon Network: Skate Rush" class="lazy" data-src="https://img.kbhgames.com/2021/05/cartoon-network-skate-rush.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Cartoon Network: Skate Rush
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/rally-point">
+       <img alt="Rally Point" class="lazy" data-src="https://img.kbhgames.com/2021/06/Rally-Point.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Rally Point
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/craig-of-the-creek-recycle-squad">
+       <img alt="Craig of the Creek: Recycle Squad" class="lazy" data-src="https://img.kbhgames.com/2021/06/craig-of-the-creek-recycle-squad.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Craig of the Creek: Recycle Squad
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/gunner">
+       <img alt="Gunner" class="lazy" data-src="https://img.kbhgames.com/2021/06/Gunner.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Gunner
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fly-this">
+       <img alt="Fly THIS!" class="lazy" data-src="https://img.kbhgames.com/2021/05/Fly-THIS.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Fly THIS!
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/top-speed-racing-3d">
+       <img alt="Top Speed Racing 3D" class="lazy" data-src="https://img.kbhgames.com/2021/06/Top-Speed-Racing-3D.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Top Speed Racing 3D
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-killer">
+       <img alt="Zombie Killer" class="lazy" data-src="https://img.kbhgames.com/2021/04/Zombie-Killer.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Killer
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/underneath">
+       <img alt="Underneath" class="lazy" data-src="https://img.kbhgames.com/2021/04/Underneath.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Underneath
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/the-fall-of-catzahstan">
+       <img alt="The Fall of Catzahstan" class="lazy" data-src="https://img.kbhgames.com/2021/05/The-Fall-of-Catzahstan.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        The Fall of Catzahstan
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-mission-8">
+       <img alt="Zombie Mission 8" class="lazy" data-src="https://img.kbhgames.com/2021/06/Zombie-Mission-8-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Mission 8
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pixel-samurai">
+       <img alt="Pixel Samurai" class="lazy" data-src="https://img.kbhgames.com/2021/06/Pixel-Samurai.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pixel Samurai
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/the-rise-of-dracula">
+       <img alt="The Rise Of Dracula" class="lazy" data-src="https://img.kbhgames.com/2021/05/The-Rise-Of-Dracula.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        The Rise Of Dracula
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/jump-forge">
+       <img alt="Jump Forge" class="lazy" data-src="https://img.kbhgames.com/2021/04/Jump-Forge.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Jump Forge
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/lotus-armageddon">
+       <img alt="Lotus Armageddon" class="lazy" data-src="https://img.kbhgames.com/2021/06/Lotus-Armageddon.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Lotus Armageddon
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/top-outpost">
+       <img alt="Top Outpost" class="lazy" data-src="https://img.kbhgames.com/2021/06/Top-Outpost.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Top Outpost
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/goldun">
+       <img alt="Goldun" class="lazy" data-src="https://img.kbhgames.com/2021/04/Goldun-2.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Goldun
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/too-fast">
+       <img alt="TOO FAST" class="lazy" data-src="https://img.kbhgames.com/2021/04/TOO-FAST.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        TOO FAST
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/action">
+       <img alt="More Action Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/puzzle">
+        Puzzle Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/puzzle/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="puzzle">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/deepest-sword">
+       <img alt="Deepest Sword" class="lazy" data-src="https://img.kbhgames.com/2021/04/Deepest-Sword.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Deepest Sword
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/red-handed">
+       <img alt="Red Handed" class="lazy" data-src="https://img.kbhgames.com/2021/03/Red-Handed.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Red Handed
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-parade-defense-3">
+       <img alt="Zombie Parade Defense 3" class="lazy" data-src="https://img.kbhgames.com/2021/04/Zombie-Parade-Defense-3-1.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Parade Defense 3
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sort-among-us">
+       <img alt="Sort Among Us" class="lazy" data-src="https://img.kbhgames.com/2021/05/Sort-Among-Us.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sort Among Us
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/a-taste-of-the-past">
+       <img alt="A Taste of the Past" class="lazy" data-src="https://img.kbhgames.com/2021/05/A-Taste-of-the-Past.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        A Taste of the Past
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/game-cafe-escape">
+       <img alt="Game Cafe Escape" class="lazy" data-src="https://img.kbhgames.com/2021/06/Game-Cafe-Escape.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Game Cafe Escape
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fly-this">
+       <img alt="Fly THIS!" class="lazy" data-src="https://img.kbhgames.com/2021/05/Fly-THIS.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Fly THIS!
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/conduct-this">
+       <img alt="Conduct THIS!" class="lazy" data-src="https://img.kbhgames.com/2021/02/Conduct-THIS.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Conduct THIS!
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/admin">
+       <img alt="Admin" class="lazy" data-src="https://img.kbhgames.com/2021/04/Admin.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Admin
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/jumphase">
+       <img alt="Jumphase" class="lazy" data-src="https://img.kbhgames.com/2021/06/Jumphase.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Jumphase
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/im-outta-here">
+       <img alt="I'm Outta Here" class="lazy" data-src="https://img.kbhgames.com/2021/03/Im-Outta-Here.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        I'm Outta Here
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pink">
+       <img alt="Pink" class="lazy" data-src="https://img.kbhgames.com/2021/05/Pink.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pink
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/chill-out">
+       <img alt="Chill Out" class="lazy" data-src="https://img.kbhgames.com/2021/05/Chill-Out.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Chill Out
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/alice-in-the-maze">
+       <img alt="Alice in the maze" class="lazy" data-src="https://img.kbhgames.com/2021/03/Alice-in-the-maze.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Alice in the maze
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/laser-push">
+       <img alt="Laser Push" class="lazy" data-src="https://img.kbhgames.com/2021/05/Laser-Push-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Laser Push
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/one-screen-run-2">
+       <img alt="One Screen Run 2" class="lazy" data-src="https://img.kbhgames.com/2021/02/One-Screen-Run-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        One Screen Run 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/rope-slash-2">
+       <img alt="Rope Slash 2" class="lazy" data-src="https://img.kbhgames.com/2021/02/Rope-Slash-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Rope Slash 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/tower-of-the-scorched-sea">
+       <img alt="Tower of the Scorched Sea" class="lazy" data-src="https://img.kbhgames.com/2021/06/Tower-of-the-Scorched-Sea.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Tower of the Scorched Sea
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/push-the-box-3d">
+       <img alt="Push The Box 3D" class="lazy" data-src="https://img.kbhgames.com/2021/02/Push-The-Box-3D.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Push The Box 3D
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sticky-friends">
+       <img alt="Sticky Friends" class="lazy" data-src="https://img.kbhgames.com/2021/01/Sticky-Friends.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sticky Friends
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/scope">
+       <img alt="SCOPE Room Escape" class="lazy" data-src="https://img.kbhgames.com/2021/04/SCOPE.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        SCOPE Room Escape
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pixel-detective">
+       <img alt="Pixel Detective" class="lazy" data-src="https://img.kbhgames.com/2021/03/Pixel-Detective.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pixel Detective
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/shaun-the-sheep-sheep-stack">
+       <img alt="Shaun The Sheep Sheep Stack" class="lazy" data-src="https://img.kbhgames.com/2021/02/Shaun-The-Sheep-Sheep-Stack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Shaun The Sheep Sheep Stack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/flower-escape">
+       <img alt="Flower Escape" class="lazy" data-src="https://img.kbhgames.com/2021/02/Flower-Escape.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Flower Escape
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/cats-n-wires">
+       <img alt="Cats n Wires" class="lazy" data-src="https://img.kbhgames.com/2021/05/Cats-n-Wires.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Cats n Wires
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/telepobox">
+       <img alt="Telepobox" class="lazy" data-src="https://img.kbhgames.com/2021/04/Telepobox.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Telepobox
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fist-bump">
+       <img alt="Fist Bump" class="lazy" data-src="https://img.kbhgames.com/2021/03/Fist-Bump.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Fist Bump
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fliptris">
+       <img alt="FLIPTRIS" class="lazy" data-src="https://img.kbhgames.com/2021/05/FLIPTRIS.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FLIPTRIS
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/flip-n-fall">
+       <img alt="Flip 'n Fall" class="lazy" data-src="https://img.kbhgames.com/2021/06/flip-n-fall.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Flip 'n Fall
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/millionaire-trivia">
+       <img alt="Millionaire Trivia" class="lazy" data-src="https://img.kbhgames.com/2021/02/Millionaire-Trivia.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Millionaire Trivia
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pirate-fox-detective-the-case-of-the-conspicuous-klawz-crew">
+       <img alt="Pirate Fox Detective: The Case of The Conspicuous Klawz Crew" class="lazy" data-src="https://img.kbhgames.com/2021/05/pirate-fox-detective-the-case-of-the-conspicuous-klawz-crew.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pirate Fox Detective: The Case of The Conspicuous Klawz Crew
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/rain-on-your-parade-prologue">
+       <img alt="Rain on Your Parade Prologue" class="lazy" data-src="https://img.kbhgames.com/2021/04/Rain-on-Your-Parade-Prologue.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Rain on Your Parade Prologue
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/puzzle">
+       <img alt="More PUZZLE Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/2-player">
+        Two Player Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/2-player/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="2player">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/two-ball-3d-dark">
+       <img alt="Two Ball 3D: Dark" class="lazy" data-src="https://img.kbhgames.com/2021/05/two-ball-3d-dark.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Two Ball 3D: Dark
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/stickman-supreme-duelist-2">
+       <img alt="Stickman Supreme Duelist 2" class="lazy" data-src="https://img.kbhgames.com/2021/03/Stickman-Supreme-Duelist-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Stickman Supreme Duelist 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/drunken-table-wars">
+       <img alt="Drunken Table Wars" class="lazy" data-src="https://img.kbhgames.com/2021/04/Drunken-Table-Wars.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Drunken Table Wars
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/mx-offroad-mountain-bike">
+       <img alt="MX OffRoad Mountain Bike" class="lazy" data-src="https://img.kbhgames.com/2021/03/MX-OffRoad-Mountain-Bike.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        MX OffRoad Mountain Bike
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/castle-crashing-the-beard-hd">
+       <img alt="Castle Crashing the Beard HD" class="lazy" data-src="https://img.kbhgames.com/2021/04/Castle-Crashing-the-Beard-HD.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Castle Crashing the Beard HD
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/tic-tac-toe-mania">
+       <img alt="Tic Tac Toe Mania" class="lazy" data-src="https://img.kbhgames.com/2021/03/Tic-Tac-Toe-Mania.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Tic Tac Toe Mania
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/football-legends-2021">
+       <img alt="Football Legends 2021" class="lazy" data-src="https://img.kbhgames.com/2021/05/Football-Legends-2021.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Football Legends 2021
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-parade-defense-3">
+       <img alt="Zombie Parade Defense 3" class="lazy" data-src="https://img.kbhgames.com/2021/04/Zombie-Parade-Defense-3-1.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Parade Defense 3
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/castle-wars-middle-ages">
+       <img alt="Castle Wars: Middle Ages" class="lazy" data-src="https://img.kbhgames.com/2021/04/castle-wars-middle-ages.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Castle Wars: Middle Ages
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pocket-league-3d">
+       <img alt="Pocket League 3D" class="lazy" data-src="https://img.kbhgames.com/2021/03/Pocket-League-3D.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pocket League 3D
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/soccer-heads">
+       <img alt="Soccer Heads" class="lazy" data-src="https://img.kbhgames.com/2021/03/Soccer-Heads.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Soccer Heads
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-mission-7">
+       <img alt="Zombie Mission 7" class="lazy" data-src="https://img.kbhgames.com/2021/03/Zombie-Mission-7.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Mission 7
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fiveheads-soccer">
+       <img alt="Fiveheads Soccer" class="lazy" data-src="https://img.kbhgames.com/2021/03/Fiveheads-Soccer.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Fiveheads Soccer
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/drunken-wrestle">
+       <img alt="Drunken Wrestle" class="lazy" data-src="https://img.kbhgames.com/2021/06/Drunken-Wrestle.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Drunken Wrestle
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-mission-8">
+       <img alt="Zombie Mission 8" class="lazy" data-src="https://img.kbhgames.com/2021/06/Zombie-Mission-8-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Mission 8
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/2-player">
+       <img alt="More 2 Player Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/shooting">
+        Shooting Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/shooting/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="shooting">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/madness-off-color">
+       <img alt="MADNESS: Off-Color" class="lazy" data-src="https://img.kbhgames.com/2021/05/madness-off-color.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        MADNESS: Off-Color
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/mineworld-horror-the-mansion">
+       <img alt="Mineworld Horror: The Mansion" class="lazy" data-src="https://img.kbhgames.com/2021/03/mineworld-horror-the-mansion.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Mineworld Horror: The Mansion
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/red-handed">
+       <img alt="Red Handed" class="lazy" data-src="https://img.kbhgames.com/2021/03/Red-Handed.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Red Handed
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/jungle-hero-2">
+       <img alt="Jungle Hero 2" class="lazy" data-src="https://img.kbhgames.com/2021/02/Jungle-Hero-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Jungle Hero 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/ragdoll-fall">
+       <img alt="Ragdoll Fall" class="lazy" data-src="https://img.kbhgames.com/2021/03/Ragdoll-Fall.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Ragdoll Fall
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/gun-knight">
+       <img alt="Gun Knight" class="lazy" data-src="https://img.kbhgames.com/2021/03/Gun-Knight.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Gun Knight
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/gunner">
+       <img alt="Gunner" class="lazy" data-src="https://img.kbhgames.com/2021/06/Gunner.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Gunner
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/gun-orphan">
+       <img alt="Gun Orphan" class="lazy" data-src="https://img.kbhgames.com/2021/04/Gun-Orphan.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Gun Orphan
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/the-lost-night">
+       <img alt="The Lost Night" class="lazy" data-src="https://img.kbhgames.com/2021/03/The-Lost-Night.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        The Lost Night
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/the-fall-of-catzahstan">
+       <img alt="The Fall of Catzahstan" class="lazy" data-src="https://img.kbhgames.com/2021/05/The-Fall-of-Catzahstan.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        The Fall of Catzahstan
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/bullet-heaven-3">
+       <img alt="Bullet Heaven 3" class="lazy" data-src="https://img.kbhgames.com/2021/02/Bullet-Heaven-3.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Bullet Heaven 3
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/super-raft-boat">
+       <img alt="Super Raft Boat" class="lazy" data-src="https://img.kbhgames.com/2021/02/Super-Raft-Boat.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Super Raft Boat
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/lotus-armageddon">
+       <img alt="Lotus Armageddon" class="lazy" data-src="https://img.kbhgames.com/2021/06/Lotus-Armageddon.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Lotus Armageddon
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/noir-deinitialize">
+       <img alt="Noir: Deinitialize" class="lazy" data-src="https://img.kbhgames.com/2021/03/noir-deinitialize.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Noir: Deinitialize
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/top-outpost">
+       <img alt="Top Outpost" class="lazy" data-src="https://img.kbhgames.com/2021/06/Top-Outpost.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Top Outpost
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pixel-crisis">
+       <img alt="Pixel Crisis" class="lazy" data-src="https://img.kbhgames.com/2021/02/Pixel-Crisis-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pixel Crisis
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/dick-tracy-sega">
+       <img alt="Dick Tracy (Sega)" class="lazy" data-src="https://img.kbhgames.com/2021/03/Dick-Tracy-Sega.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Dick Tracy (Sega)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/shooting">
+       <img alt="More Shooting Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/adventure">
+        Adventure Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/adventure/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="adventure">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pokemon-darkfire">
+       <img alt="Pokemon Darkfire" class="lazy" data-src="https://img.kbhgames.com/2021/04/Pokemon-Darkfire.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pokemon Darkfire
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/adventure-time-break-the-worm">
+       <img alt="Adventure Time Break The Worm" class="lazy" data-src="https://img.kbhgames.com/2013/06/Adventure-Time-Break-The-Worm.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Adventure Time Break The Worm
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pokemon-radical-red-version">
+       <img alt="Radical Red Version" class="lazy" data-src="https://img.kbhgames.com/2021/06/Radical-Red-Version.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Radical Red Version
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pokemon-demon-island">
+       <img alt="Pokemon Demon Island" class="lazy" data-src="https://img.kbhgames.com/2021/04/Pokemon-Demon-Island.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pokemon Demon Island
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/heat-rebirth">
+       <img alt="Heat: Rebirth" class="lazy" data-src="https://img.kbhgames.com/2021/04/Heat-Rebirth.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Heat: Rebirth
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/nextdoor">
+       <img alt="NextDoor" class="lazy" data-src="https://img.kbhgames.com/2021/04/NextDoor-1.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        NextDoor
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/tower-of-the-scorched-sea">
+       <img alt="Tower of the Scorched Sea" class="lazy" data-src="https://img.kbhgames.com/2021/06/Tower-of-the-Scorched-Sea.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Tower of the Scorched Sea
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/senya-and-oscar-2">
+       <img alt="Senya and Oscar 2" class="lazy" data-src="https://img.kbhgames.com/2021/06/Senya-and-Oscar-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Senya and Oscar 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/virtual-bart-redux">
+       <img alt="Virtual Bart Redux" class="lazy" data-src="https://img.kbhgames.com/2021/04/Virtual-Bart-Redux.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Virtual Bart Redux
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pirate-fox-detective-the-case-of-the-conspicuous-klawz-crew">
+       <img alt="Pirate Fox Detective: The Case of The Conspicuous Klawz Crew" class="lazy" data-src="https://img.kbhgames.com/2021/05/pirate-fox-detective-the-case-of-the-conspicuous-klawz-crew.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pirate Fox Detective: The Case of The Conspicuous Klawz Crew
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/rain-on-your-parade-prologue">
+       <img alt="Rain on Your Parade Prologue" class="lazy" data-src="https://img.kbhgames.com/2021/04/Rain-on-Your-Parade-Prologue.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Rain on Your Parade Prologue
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/cursed-travels-flame-of-the-banshee">
+       <img alt="Cursed Travels: Flame of the Banshee" class="lazy" data-src="https://img.kbhgames.com/2021/04/cursed-travels-flame-of-the-banshee.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Cursed Travels: Flame of the Banshee
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/adventure">
+       <img alt="More Adventure Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/strategy">
+        Strategy Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/strategy/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="strategy">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/stick-war-legacy-2">
+       <img alt="Stick War Legacy 2" class="lazy" data-src="https://img.kbhgames.com/2021/03/Stick-War-Legacy-2.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Stick War Legacy 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pokemon-radical-red-version">
+       <img alt="Radical Red Version" class="lazy" data-src="https://img.kbhgames.com/2021/06/Radical-Red-Version.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Radical Red Version
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pokemon-demon-island">
+       <img alt="Pokemon Demon Island" class="lazy" data-src="https://img.kbhgames.com/2021/04/Pokemon-Demon-Island.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pokemon Demon Island
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/castle-constructor">
+       <img alt="Castle Constructor" class="lazy" data-src="https://img.kbhgames.com/2021/03/Castle-Constructor.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Castle Constructor
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/power-the-grid">
+       <img alt="Power The Grid" class="lazy" data-src="https://img.kbhgames.com/2021/03/Power-The-Grid.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Power The Grid
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fe-8-the-eligors-spear">
+       <img alt="FE8: The Eligor's Spear" class="lazy" data-src="https://img.kbhgames.com/2021/03/fe-8-the-eligors-spear.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FE8: The Eligor's Spear
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/guild-of-zany">
+       <img alt="Guild Of Zany" class="lazy" data-src="https://img.kbhgames.com/2021/03/Guild-Of-Zany-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Guild Of Zany
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/strategy">
+       <img alt="More Strategy Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/sports">
+        Sports Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/sports/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider responsive2" id="sports">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/football-legends-2021">
+       <img alt="Football Legends 2021" class="lazy" data-src="https://img.kbhgames.com/2021/05/Football-Legends-2021.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Football Legends 2021
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/rally-point">
+       <img alt="Rally Point" class="lazy" data-src="https://img.kbhgames.com/2021/06/Rally-Point.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Rally Point
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/sports">
+       <img alt="More Sports Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/multiplayer">
+        Multiplayer Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/multiplayer/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider responsive2" id="multiplayer">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/warfare-classic">
+       <img alt="Warfare Classic" class="lazy" data-src="https://img.kbhgames.com/2021/02/Warfare-Classic.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Warfare Classic
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/assault-bots">
+       <img alt="Assault Bots" class="lazy" data-src="https://img.kbhgames.com/2021/02/Assault-Bots.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Assault Bots
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/exploder-io">
+       <img alt="Exploder.io" class="lazy" data-src="https://img.kbhgames.com/2021/02/Exploder.io_.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Exploder.io
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/tankroyale-io">
+       <img alt="TankRoyale.io" class="lazy" data-src="https://img.kbhgames.com/2021/02/TankRoyale.io_.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        TankRoyale.io
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/crosswords-arena">
+       <img alt="Crosswords Arena" class="lazy" data-src="https://img.kbhgames.com/2021/03/Crosswords-Arena.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Crosswords Arena
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/multiplayer">
+       <img alt="More multiplayer Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/arcade">
+        Arcade Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/arcade/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="arcade">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-tord">
+       <img alt="FNF vs Tord/Tom/Edd" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnftordremastered.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Tord/Tom/Edd
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-tricky-version-2-0">
+       <img alt="FNF Vs. Tricky Version 2.0 (Phase 3)" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-vs-tricky-version-2-0.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs. Tricky Version 2.0 (Phase 3)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-impostor-among-us">
+       <img alt="FNF vs Impostor Among Us v2" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-vs-impostor-full-week.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Impostor Among Us v2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-shaggy">
+       <img alt="Friday Night Funkin vs Shaggy v2" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-vs-shaggy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Shaggy v2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-tabi-ex-boyfriend">
+       <img alt="FNF vs TABI Ex Boyfriend" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-vs-TABI-Ex-Boyfriend.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs TABI Ex Boyfriend
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-agoti">
+       <img alt="Friday Night Funkin vs AGOTI" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-AGOTI.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs AGOTI
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-bob">
+       <img alt="Friday Night Funkin vs Bob" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Bob.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Bob
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-pico-school">
+       <img alt="Friday Night Funkin: Pico School" class="lazy" data-src="https://img.kbhgames.com/2021/05/picoschool.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin: Pico School
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-sans">
+       <img alt="Friday Night Funkin Vs. Sans" class="lazy" data-src="https://img.kbhgames.com/2021/04/Friday-Night-Funkin-Vs.-Sans-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin Vs. Sans
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-starlight-mayhem">
+       <img alt="FNF: Starlight Mayhem" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-starlight-mayhem.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Starlight Mayhem
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-monika-ddlc">
+       <img alt="FNF vs Monika (DDLC) Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Monika-DDLC.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Monika (DDLC) Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-ugh-pack">
+       <img alt="FNF: UGH Pack" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-ugh-pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: UGH Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-siivagunner-corruption-pack">
+       <img alt="FNF: SiIvagunner Corruption Pack" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-siivagunner-corruption-pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: SiIvagunner Corruption Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-smg4-if-mario-was-in-fnf-mod-pack">
+       <img alt="FNF SMG4 – If Mario Was In FNF Mod Pack" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-smg4-if-mario-was-in-fnf-mod-pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF SMG4 – If Mario Was In FNF Mod Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-funkin-nights-at-freddys">
+       <img alt="FNF: Funkin' Nights at Freddy's" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-funkin-nights-at-freddys.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Funkin' Nights at Freddy's
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-fanmade-vs-tricky-phase-3">
+       <img alt="FNF: Fanmade Vs. Tricky Phase 3" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-fanmade-vs-tricky-phase-3.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Fanmade Vs. Tricky Phase 3
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-starving-artist">
+       <img alt="Friday Night Funkin vs Starving Artist" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Starving-Artist.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Starving Artist
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-vs-trollface-trollge">
+       <img alt="Friday Night Funkin vs Trollface/Trollge" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-vs-vs-trollface-trollge.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Trollface/Trollge
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-gender-swap-mod-pack">
+       <img alt="FNF Gender Swap Mod Pack" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-Gender-Swap-Mod-Pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Gender Swap Mod Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-summer-vacation">
+       <img alt="FNF: Summer Vacation" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-Summer-Vacations.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Summer Vacation
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-v-s-pompom">
+       <img alt="FNF vs Pompom and Mackie" class="lazy" data-src="https://img.kbhgames.com/2021/04/FNF-vs-Pompom-and-Mackie.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Pompom and Mackie
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-pico-x-boyfriend">
+       <img alt="FNF: Pico X Boyfriend" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-pico-x-boyfriend.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Pico X Boyfriend
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-playable-mom-vocals-for-all-songs">
+       <img alt="FNF: Playable Mom with Vocals" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-playable-mom-vocals-for-all-songs.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Playable Mom with Vocals
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/five-night-funkin-vs-bad-piggies-from-angry-birds">
+       <img alt="FNF Vs. Bad Piggies" class="lazy" data-src="https://img.kbhgames.com/2021/05/five-night-funkin-vs-bad-piggies-from-angry-birds.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs. Bad Piggies
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-chara-monster-boy">
+       <img alt="FNF vs Chara the Monster boy" class="lazy" data-src="https://img.kbhgames.com/2021/05/FNF-vs-Chara-Monster-boy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Chara the Monster boy
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-garcello-but-bad">
+       <img alt="FNF vs Garcello, but Bad" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-vs-garcello-but-bad.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Garcello, but Bad
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-the-blueballs-incident-trollge">
+       <img alt="FNF: The Blueballs Incident (Trollge)" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-the-blueballs-incident-trollge.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: The Blueballs Incident (Trollge)
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-friday-night-gaming-vs-loki">
+       <img alt="FNF: Friday Night Gaming vs Loki" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-friday-night-gaming-vs-loki.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Friday Night Gaming vs Loki
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-garcello-retrospecter-release-remix">
+       <img alt="FNF Vs Garcello Retrospecter Release" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-Vs-Garcello-Retrospecter-Release-remix.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs Garcello Retrospecter Release
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-x-ray">
+       <img alt="Friday Night Funkin X-RAY" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-X-RAY.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin X-RAY
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-viernes-night-funkin">
+       <img alt="FNF: Viernes Night Funkin'" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-viernes-night-funkin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Viernes Night Funkin'
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-pico-night-funkin">
+       <img alt="FNF: Pico Night Funkin" class="lazy" data-src="https://img.kbhgames.com/2021/06/fnf-pico-night-funkin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Pico Night Funkin
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/arcade">
+       <img alt="More Arcade Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/retro">
+        Retro Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/retro/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="retro">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/sonic-the-hedgehog-1995">
+       <img alt="Sonic 1995" class="lazy" data-src="https://img.kbhgames.com/2021/05/Sonic-The-Hedgehog-1995.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Sonic 1995
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/wink-gameboy">
+       <img alt="Wink GameBoy" class="lazy" data-src="https://img.kbhgames.com/2021/04/Wink-GameBoy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Wink GameBoy
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/retro">
+       <img alt="More Retro Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/racing">
+        Racing Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/racing/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="racing">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/cartoon-network-skate-rush">
+       <img alt="Cartoon Network: Skate Rush" class="lazy" data-src="https://img.kbhgames.com/2021/05/cartoon-network-skate-rush.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Cartoon Network: Skate Rush
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/rally-point">
+       <img alt="Rally Point" class="lazy" data-src="https://img.kbhgames.com/2021/06/Rally-Point.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Rally Point
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/racing">
+       <img alt="More Racing Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/run">
+        Run Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/run/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="run">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/hinotori-rhythm">
+       <img alt="Hinotori Rhythm" class="lazy" data-src="https://img.kbhgames.com/2021/02/Hinotori-Rhythm.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Hinotori Rhythm
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/quantum-geometry">
+       <img alt="Quantum Geometry" class="lazy" data-src="https://img.kbhgames.com/2021/05/Quantum-Geometry.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Quantum Geometry
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/dino-rex">
+       <img alt="Dino Rex" class="lazy" data-src="https://img.kbhgames.com/2021/05/dinorex.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Dino Rex
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/the-last-guy">
+       <img alt="The Last Guy" class="lazy" data-src="https://img.kbhgames.com/2021/03/The-Last-Guy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        The Last Guy
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/run">
+       <img alt="More Run Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/fighting">
+        Fighting Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/fighting/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="fighting">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/madness-off-color">
+       <img alt="MADNESS: Off-Color" class="lazy" data-src="https://img.kbhgames.com/2021/05/madness-off-color.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        MADNESS: Off-Color
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/stick-it-to-the-stickman">
+       <img alt="Stick it to the Stickman" class="lazy" data-src="https://img.kbhgames.com/2021/05/Stick-it-to-the-Stickman.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Stick it to the Stickman
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/castle-crashing-the-beard-hd">
+       <img alt="Castle Crashing the Beard HD" class="lazy" data-src="https://img.kbhgames.com/2021/04/Castle-Crashing-the-Beard-HD.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Castle Crashing the Beard HD
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/senya-and-oscar-2">
+       <img alt="Senya and Oscar 2" class="lazy" data-src="https://img.kbhgames.com/2021/06/Senya-and-Oscar-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Senya and Oscar 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pixel-samurai">
+       <img alt="Pixel Samurai" class="lazy" data-src="https://img.kbhgames.com/2021/06/Pixel-Samurai.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pixel Samurai
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/spirit-dungeons">
+       <img alt="Spirit Dungeons" class="lazy" data-src="https://img.kbhgames.com/2021/03/Spirit-Dungeons.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Spirit Dungeons
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/fighting">
+       <img alt="More Fighting Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/platform">
+        Platform Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/platform/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="platform">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/jungle-hero-2">
+       <img alt="Jungle Hero 2" class="lazy" data-src="https://img.kbhgames.com/2021/02/Jungle-Hero-2.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Jungle Hero 2
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/jumphase">
+       <img alt="Jumphase" class="lazy" data-src="https://img.kbhgames.com/2021/06/Jumphase.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Jumphase
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/tower-of-the-scorched-sea">
+       <img alt="Tower of the Scorched Sea" class="lazy" data-src="https://img.kbhgames.com/2021/06/Tower-of-the-Scorched-Sea.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Tower of the Scorched Sea
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/zombie-mission-8">
+       <img alt="Zombie Mission 8" class="lazy" data-src="https://img.kbhgames.com/2021/06/Zombie-Mission-8-1.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Zombie Mission 8
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/the-rise-of-dracula">
+       <img alt="The Rise Of Dracula" class="lazy" data-src="https://img.kbhgames.com/2021/05/The-Rise-Of-Dracula.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        The Rise Of Dracula
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/mole">
+       <img alt="MOLE" class="lazy" data-src="https://img.kbhgames.com/2021/06/MOLE.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        MOLE
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/boba-platformer">
+       <img alt="BOBA Platformer" class="lazy" data-src="https://img.kbhgames.com/2021/05/boba.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        BOBA Platformer
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/platform">
+       <img alt="More platform Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/educational">
+        Educational Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/educational/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="educational">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/game-cafe-escape">
+       <img alt="Game Cafe Escape" class="lazy" data-src="https://img.kbhgames.com/2021/06/Game-Cafe-Escape.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Game Cafe Escape
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pink">
+       <img alt="Pink" class="lazy" data-src="https://img.kbhgames.com/2021/05/Pink.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pink
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/chill-out">
+       <img alt="Chill Out" class="lazy" data-src="https://img.kbhgames.com/2021/05/Chill-Out.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Chill Out
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/boxbob">
+       <img alt="BoxBob" class="lazy" data-src="https://img.kbhgames.com/2021/06/BoxBob.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        BoxBob
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/exit84">
+       <img alt="Exit84" class="lazy" data-src="https://img.kbhgames.com/2021/06/Exit84.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Exit84
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/isocubes">
+       <img alt="IsoCubes" class="lazy" data-src="https://img.kbhgames.com/2021/05/IsoCubes.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        IsoCubes
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/microsoft-word-twister">
+       <img alt="Microsoft Word Twister" class="lazy" data-src="https://img.kbhgames.com/2021/05/Microsoft-Word-Twister.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Microsoft Word Twister
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/loihtija">
+       <img alt="Loihtija" class="lazy" data-src="https://img.kbhgames.com/2021/05/Loihtija.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Loihtija
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/educational">
+       <img alt="More educational Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/funny">
+        Funny Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/funny/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="funny">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-sarventes-mid-fight-masses">
+       <img alt="Friday Night Funkin' Sarvente's Mid-Fight Masses" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-sarventes-mid-fight-masses-1.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' Sarvente's Mid-Fight Masses
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-v-s-whitty-full-week">
+       <img alt="Friday Night Funkin' V.S. Whitty Full Week" class="lazy" data-src="https://img.kbhgames.com/2021/03/friday-night-funkin-v-s-whitty-full-week.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' V.S. Whitty Full Week
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-the-tricky-mod">
+       <img alt="Friday Night Funkin' Vs Tricky the Clown Mod" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-the-tricky-mod.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' Vs Tricky the Clown Mod
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-but-bad">
+       <img alt="Friday Night Funkin, but Bad" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-but-bad.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin, but Bad
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-bob">
+       <img alt="Friday Night Funkin vs Bob" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Bob.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Bob
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-b3-remixed">
+       <img alt="Friday Night Funkin' B3 REMIXED" class="lazy" data-src="https://img.kbhgames.com/2021/03/Friday-Night-Funkin-B3-REMIXED.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' B3 REMIXED
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/vs-zardy-ronald-mcdonald">
+       <img alt="FNF Vs Zardy &amp; Ronald Mcdonald" class="lazy" data-src="https://img.kbhgames.com/2021/04/Vs-Zardy-Ronald-Mcdonald.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF Vs Zardy &amp; Ronald Mcdonald
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-friday-night-sussin">
+       <img alt="FNF: Friday Night Sussin" class="lazy" data-src="https://img.kbhgames.com/2021/04/fnf-friday-night-sussin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Friday Night Sussin
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-smg4-if-mario-was-in-fnf-mod-pack">
+       <img alt="FNF SMG4 – If Mario Was In FNF Mod Pack" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-smg4-if-mario-was-in-fnf-mod-pack.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF SMG4 – If Mario Was In FNF Mod Pack
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-v-s-flexy-full-week">
+       <img alt="Friday Night Funkin V.S. Flexy &amp; Merchant" class="lazy" data-src="https://img.kbhgames.com/2021/04/friday-night-funkin-v-s-flexy-full-week.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin V.S. Flexy &amp; Merchant
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-summer-vacation">
+       <img alt="FNF: Summer Vacation" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-Summer-Vacations.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Summer Vacation
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-weegee">
+       <img alt="Friday Night Funkin vs Weegee" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Weegee.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Weegee
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-cyrix">
+       <img alt="Friday Night Funkin' VS Cyrix" class="lazy" data-src="https://img.kbhgames.com/2021/05/friday-night-funkin-vs-cyrix.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' VS Cyrix
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-weegeepie">
+       <img alt="Friday Night Funkin vs Weegeepie" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Funkin-vs-Weegeepie.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Weegeepie
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-shaggy-remastered">
+       <img alt="FNF vs Shaggy Remastered" class="lazy" data-src="https://img.kbhgames.com/2021/06/FNF-vs-Shaggy-Remastered.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF vs Shaggy Remastered
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-vs-dave-bambi-full-week">
+       <img alt="Friday Night Funkin vs Dave/Bambi" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-vs-dave-bambi-full-week.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Dave/Bambi
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/drunken-table-wars">
+       <img alt="Drunken Table Wars" class="lazy" data-src="https://img.kbhgames.com/2021/04/Drunken-Table-Wars.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Drunken Table Wars
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/castle-crashing-the-beard-hd">
+       <img alt="Castle Crashing the Beard HD" class="lazy" data-src="https://img.kbhgames.com/2021/04/Castle-Crashing-the-Beard-HD.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Castle Crashing the Beard HD
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-sandboxin">
+       <img alt="Friday Night Sandboxin'" class="lazy" data-src="https://img.kbhgames.com/2021/06/Friday-Night-Sandboxin.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Sandboxin'
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-rosie">
+       <img alt="Friday Night Funkin' vs Rosie" class="lazy" data-src="https://img.kbhgames.com/2021/06/friday-night-funkin-vs-rosie.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin' vs Rosie
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/friday-night-funkin-vs-onek">
+       <img alt="Friday Night Funkin vs Onek" class="lazy" data-src="https://img.kbhgames.com/2021/05/Friday-Night-Funkin-vs-Onek.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Friday Night Funkin vs Onek
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/blob-opera">
+       <img alt="Blob Opera" class="lazy" data-src="https://img.kbhgames.com/2021/03/Blob-Opera.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Blob Opera
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fine-night-funkout-vs-clippy">
+       <img alt="Fine Night Funkout VS Clippy" class="lazy" data-src="https://img.kbhgames.com/2021/06/Fine-Night-Funkout-VS-Clippy.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Fine Night Funkout VS Clippy
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/pizza-tower">
+       <img alt="Pizza Tower" class="lazy" data-src="https://img.kbhgames.com/2021/03/Pizza-Tower.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Pizza Tower
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/drunken-wrestle">
+       <img alt="Drunken Wrestle" class="lazy" data-src="https://img.kbhgames.com/2021/06/Drunken-Wrestle.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Drunken Wrestle
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/rain-on-your-parade-prologue">
+       <img alt="Rain on Your Parade Prologue" class="lazy" data-src="https://img.kbhgames.com/2021/04/Rain-on-Your-Parade-Prologue.png" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Rain on Your Parade Prologue
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/funny">
+       <img alt="More Funny Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <section class="tag-carousel">
+    <div class="tag-carousel-title">
+     <div class="fgh1">
+      <h1>
+       <a href="https://kbhgames.com/tag/cartoon">
+        Cartoon Games
+       </a>
+      </h1>
+     </div>
+     <div class="tag-more">
+      <a href="https://kbhgames.com/tag/cartoon/page/2">
+       (View More)
+      </a>
+     </div>
+    </div>
+    <div class="slider" id="cartoon">
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/fnf-spinel-vs-steven">
+       <img alt="FNF: Spinel vs. Steven" class="lazy" data-src="https://img.kbhgames.com/2021/05/fnf-spinel-vs-steven.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        FNF: Spinel vs. Steven
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/cartoon-network-skate-rush">
+       <img alt="Cartoon Network: Skate Rush" class="lazy" data-src="https://img.kbhgames.com/2021/05/cartoon-network-skate-rush.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Cartoon Network: Skate Rush
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/game/craig-of-the-creek-recycle-squad">
+       <img alt="Craig of the Creek: Recycle Squad" class="lazy" data-src="https://img.kbhgames.com/2021/06/craig-of-the-creek-recycle-squad.jpg" height="180" src="/m.svg" width="180"/>
+       <div class="titleBox">
+        Craig of the Creek: Recycle Squad
+       </div>
+      </a>
+     </div>
+     <div class="boxInner2">
+      <a href="https://kbhgames.com/tag/cartoon">
+       <img alt="More Cartoon Games" class="lazy" data-src="//img.kbhgames.com/2018/09/seemore.jpg" height="180" src="/m.svg" width="180"/>
+      </a>
+     </div>
+     <div class="left-button">
+     </div>
+     <div class="right-button">
+     </div>
+    </div>
+   </section>
+   <p id="extra-desc">
+    KBH Games is a gaming portal website where you can
+    <a href="https://kbhgames.com">
+     Free Online Games
+    </a>
+    . We have a large collection of high quality free online games from reputable game makers and indie game developers. We offer easy solution for developers to share their games. We have a fast and easy website that makes finding and playing new games easy and hassle-free. Start browsing our site and see what fun games you'll discover today.
+   </p>
+   <footer>
+    <div class="bar">
+     <div class="bar-wrap">
+      <ul class="links">
+       <li>
+        <a href="https://kbhgames.com">
+         KBH Games
+        </a>
+       </li>
+       <li>
+        <a href="https://kbhgames.com/faq">
+         FAQ
+        </a>
+       </li>
+       <li>
+        <a href="https://kbhgames.com/about">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="https://kbhgames.com/terms-of-use">
+         Terms and Conditions
+        </a>
+       </li>
+       <li>
+        <a href="https://kbhgames.com/privacy">
+         Privacy
+        </a>
+       </li>
+       <li>
+        All Games © rights reserved to their respective owners.
+       </li>
+      </ul>
+      <div class="clear">
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script src="//kbhgames.com/wp-content/themes/v1/js/jquery-3.4.1.min.js">
+  </script>
+  <link href="https://kbhgames.com/wp-includes/css/dashicons.min.css" id="dashicons-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://kbhgames.com/wp-content/plugins/post-views-counter/css/frontend.css?ver=1.3.4" id="post-views-counter-frontend-css" media="all" rel="stylesheet" type="text/css"/>
+  <noscript id="deferred-styles">
+   <link href="/wp-content/themes/v1/style.css?v=995" rel="stylesheet" type="text/css"/>
+  </noscript>
+  <script>
+   var loadDeferredStyles = function() { var addStylesNode = document.getElementById("deferred-styles"); var replacement = document.createElement("div"); replacement.innerHTML = addStylesNode.textContent; document.body.appendChild(replacement); addStylesNode.parentElement.removeChild(addStylesNode); }; var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame; if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); }); else window.addEventListener('load', loadDeferredStyles);
+  </script>
+  <script defer="" src="//kbhgames.com/wp-content/themes/v1/js/bottom-all.js?v=33dss4">
+  </script>
+  <script type="text/javascript">
+   performslide('most-liked', 2, 196); performslide('new-games', 2, 196); performslide('best-of-new-games', 2, 196); performslide('featured', 2, 196); performslide('action', 2, 196);performslide('puzzle', 2, 196);performslide('2player', 2, 196);performslide('shooting', 2, 196);performslide('adventure', 2, 196);performslide('strategy', 2, 196);performslide('sports', 2, 196);performslide('multiplayer', 2, 196);performslide('casual', 2, 196);performslide('retro', 2, 196);performslide('racing', 2, 196);performslide('run', 2, 196);performslide('fighting', 2, 196);performslide('platform', 2, 196);performslide('action', 2, 196);performslide('educational', 2, 196);performslide('funny', 2, 196);performslide('cartoon', 2, 196); function performslide(ID, column, extra) { if($('#'+ID).scrollLeft() < 20){ $('.left-button' ).css( "display", "none" ); } var containerid_right = $('#'+ID+' .right-button'); var containerid_left = $('#'+ID+' .left-button'); containerid_right.click(function() { var slider_total_width_not_hidden= ((($('#'+ID).children('div').length)*extra)/column); var silderwidth = $('#'+ID).width(); var sliderwidth80 = $('#'+ID).width()*.8; var p = $('#'+ID); containerid_left.css( "display", "block" ); if (p.scrollLeft()+silderwidth*2 > slider_total_width_not_hidden){ containerid_right.css( "display", "none" ); } $('#'+ID).animate({ scrollLeft: "+="+sliderwidth80+"px" },300); }); containerid_left.click(function() { var sliderwidth80 = $('#'+ID).width()*.8; var silderwidth = $('#'+ID).width(); var p = $('#'+ID); if (p.scrollLeft()<silderwidth-extra){ containerid_left.css( "display", "none" ); } var p = $('#'+ID); containerid_right.css( "display", "block" ); $('#'+ID).animate({ scrollLeft: "-="+sliderwidth80+"px" }, 300); }); }
+  </script>
+  <div aria-hidden="true" class="ml-modal fade" id="modal-login" role="dialog" tabindex="-1">
+  </div>
+ </body>
+</html>
