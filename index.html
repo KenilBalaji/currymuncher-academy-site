@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curry Munchery Academy</title>
+    <style>
+      :root {
+        --bg: #0f0f0f;
+        --surface: #191919;
+        --surface-2: #232323;
+        --accent: #ff7a00;
+        --text: #f8f8f8;
+        --muted: #c7c7c7;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(180deg, #1a1a1a 0%, var(--bg) 45%);
+        color: var(--text);
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+      }
+
+      .hero {
+        background: var(--surface);
+        border: 2px solid var(--accent);
+        border-radius: 16px;
+        padding: 2.5rem 1.25rem;
+        text-align: center;
+        box-shadow: 0 0 24px rgba(255, 122, 0, 0.28);
+      }
+
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        color: var(--accent);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .content {
+        margin-top: 1.25rem;
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .card {
+        background: var(--surface-2);
+        border-left: 4px solid var(--accent);
+        border-radius: 10px;
+        padding: 1rem;
+      }
+
+      .card h2 {
+        margin: 0 0 0.35rem;
+        color: var(--accent);
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <h1>Curry Munchery Academy</h1>
+        <p class="subtitle">Spicy lessons. Bold flavors. Real kitchen confidence.</p>
+      </section>
+
+      <section class="content">
+        <article class="card">
+          <h2>Foundations</h2>
+          <p>Master spices, prep, and curry base techniques with step-by-step classes.</p>
+        </article>
+        <article class="card">
+          <h2>Weekly Challenges</h2>
+          <p>Practice what you learn with themed dishes and skill-building tasks.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
